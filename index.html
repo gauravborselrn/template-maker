@@ -20,7 +20,24 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-</head><body>
+
+<script type="text/javascript">
+  /*LOGO upload*/
+            function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) { 
+                    $('#logo-holder')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+</head>
+<body>
 <div class="container-fluid">
 <div class="col-lg-3 col-md-3 nopadd zone">
   <div class="sidebar">
@@ -31,7 +48,7 @@
           <li>
             <div class="form-group">
               <label class="">Add Partner Logo</label>
-              <input type="file" name="img[]" class="file">
+              <input type="file" name="img[]" class="file" onchange="readURL(this);">
               <div class="input-group col-xs-12">
                 <input type="text" class="form-control input-lg" disabled placeholder="">
                 <span class="input-group-btn">
@@ -70,7 +87,7 @@
   <div id="prntdesk" class="middle desktop-view ui-view">
     <div class="midtop">
       <div class="row">
-        <div class="col-lg-4 col-md-4 logo"><img src="images/logo.jpg" alt="Logo"></div>
+        <div class="col-lg-4 col-md-4 logo"><img id='logo-holder' src="images/logo.jpg" alt="Logo"></div>
         <div class="col-lg-8 col-md-8">
           <ul class="breadcrumb">
             <li>The Company Code: Putting Principle into Practice</li>
