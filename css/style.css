@@ -277,6 +277,15 @@ ul.sideform li:nth-child(3):before {
 	font-weight: 700;
 	bottom: 12px;
 }
+ul.sideform li:nth-child(4):before {
+	content: "4";
+	position: absolute;
+	left: 0;
+	color: #cccccc;
+	font-size: 36px;
+	font-weight: 700;
+	bottom: 12px;
+}
 ul.midtimer {
 	display: inline-block;
 	margin: 0 auto;
@@ -289,7 +298,7 @@ ul.midtimer li {
 	padding: 0px 5px;
 }
 .midcorn a {
-	color: #9caeca;
+	color: #DDDDDD;
 	font-size: 9px;
 	display: block;
 }
@@ -318,6 +327,7 @@ ul.midtimer li {
 	margin: 0 auto;
 	width: 1008px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	-webkit-box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.1);
 	box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.1);
@@ -332,11 +342,24 @@ ul.midtimer li {
 	margin-left: 10px;
 }
 .midbottom {
-	background-color: #063071;
-	padding: 5px 10px;
+	background-color: #303945;
+	padding: 0px 10px;
 }
 .margin-b-35 {
 	margin-top: 170px;
+}
+ul.botmenu li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.midcorn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+ul.botmenu li.actv {
+    background: #292f38;
+	padding-left:5px;
+	padding-right:5px;
 }
 /*=======================================================
 			PROGRESS
@@ -363,7 +386,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', en
 }
 .progress {
 	height: 9px;
-	background-color: #3a8cae;
+	background-color: #1f1f1f;
 	background-image: none;
 	box-shadow: none;
 	margin-top: 1px;
@@ -689,7 +712,7 @@ border-radius: 5px;
     background-color: #0a0a0a;
     width: 14px!important;
     height: 14px;
-    border-radius: 100%;
+    border-radius: 7px;
     position: absolute;
     left: -2px;
     top: -2px;
@@ -719,7 +742,7 @@ border-radius: 5px;
   height: 25px;
   width: 25px;
   left: 0px;
-  bottom: -1px;
+  bottom: -2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -740,12 +763,68 @@ input:checked + .slider:before {
 }
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 13px;
   border: 2px solid #FFF;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+  border-radius: 12px;
+}
+label.blocklbl {
+    display: block;
+    margin-bottom: 8px;
+}
+span.rdthree, span.rdfour {
+    display: inline-block;
+    margin-right: 25px;
+}
+.midlast ul li {
+    display: inline-block;
+    font-size: 13px;
+    padding: 5px;
+    margin-right: 10px;
+}
+.midlast ul li span {
+	font-weight:500;
+}
+#resmenuop {
+    position: relative;
+}
+ul.resources {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+	width:275px;
+}
+ul.resources li {
+	background: #2a3039;
+	display:block;
+	padding:9px 20px;
+	border-top: 1px solid #303945;
+}
+ul.resources li a {
+    color: #FFF;
+	display:block;
+	font-size:11px;
+}
+ul.resources li.headermenu {
+    background: #222831;
+    color: #FFF;
+    font-size: 14px;
+    -webkit-border-top-left-radius: 6px;
+-webkit-border-top-right-radius: 6px;
+-moz-border-radius-topleft: 6px;
+-moz-border-radius-topright: 6px;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+	border-top: 0px solid #303945;
+	position:relative;
+}
+ul.resources li.headermenu i {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
 }
 /*=======================================================
 			RESPONSIVE

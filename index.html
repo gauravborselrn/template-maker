@@ -68,7 +68,19 @@
               <input type="text" value="#00AABB" class="form-control" />
               <span class="input-group-addon"><i></i></span> </div>
           </li>
-          <li>
+           <li id='text-color'>
+            <div class="form-group">
+			           <label class="blocklbl">Text Color</label>
+		            <span class="rdthree"> 
+                <input type="radio" id="White" value='#ffffff' name="radio-group-one" checked>
+                <label for="White">White</label>
+                </span> <span class="rdfour"> 
+                <input type="radio" id="Black" value='#000000' name="radio-group-one">
+                <label for="Black">Black</label>
+                </span> 
+            </div>
+          </li>
+		      <li id='screen-mode'>
             <div class="form-group"> <span class="rdone"> <i class="material-icons">&#xE30C;</i>
               <input type="radio" id="desktop" name="radio-group" checked>
               <label for="desktop">Desktop</label>
@@ -80,10 +92,11 @@
         </ul>
       </form>
     </div>
-    <a href="#" class="sitebutton marg-left-35"><i class="fa fa-eye" aria-hidden="true"></i>Show Preview</a> <!--<img src="images/lrnlogo.jpg" class="margin-b-35">--> </div>
+    <!-- <a class="sitebutton marg-left-35">Reset</a> <img src="images/lrnlogo.jpg" class="margin-b-35"> --></div>
 </div>
 <div class="col-lg-9 col-md-9 nopadd">
   <div class="top"><a href="#" class="sitebutton save-prev-img"><i class="fa fa-download" aria-hidden="true"></i>Save Preview Image</a></div>
+  
   <div id="prntdesk" class="middle desktop-view ui-view">
     <div class="midtop">
       <div class="row">
@@ -129,7 +142,74 @@
         </div>
       </div>
     </div>
+	<div class="midlast"><ul>
+	<li>Partner Brand Color 1 - <span class='color1'>#00aabb</span></li>
+	<li>Partner Brand Color 2 - <span class='color2'>#084045</span></li>
+	<li>Text Color - <span class='color3'>#FFFFFF</span></li>
+	</ul></div>
   </div>
+  
+   
+  <div id="prntdesk-open" class="middle desktop-view ui-view">
+    <div class="midtop">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 logo"><img id='logo-holder' src="images/logo.jpg" alt="Logo"></div>
+        <div class="col-lg-8 col-md-8">
+          <ul class="breadcrumb">
+            <li>The Company Code: Putting Principle into Practice</li>
+            <li class="rtarrow"><i class="material-icons">&#xE315;</i></li>
+            <li class="active">A Culture of Respect</li>
+            <li class="rtclose"><i class="material-icons">&#xE5CD;</i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="resmenuop" class="midmid"> <img src="images/middle-img.jpg">
+	<ul class="resources">
+	<li class="headermenu">Resources <i class="material-icons">&#xE5CD;</i></li>
+	<li><a href="#">FAQ</a></li>
+	<li><a href="#">Top Ten</a></li>
+	<li><a href="#">Contact</a></li>
+	</ul>
+	</div>
+    <div class="midbottom">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <ul class="botmenu">
+            <li><i class="material-icons">&#xE241;</i><a href="#">Menu</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 midcorn text-center">
+          <ul class="midtimer">
+            <li>7/90</li>
+            <li>
+              <div class="clearfix">
+                <div class="progress">
+                  <div data-percentage="0%" style="width: 10%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </li>
+            <li>00:02 / 00:02</li>
+          </ul>
+          <a href="#">© LRN Corporation</a> </div>
+        <div class="col-lg-4 col-md-4">
+          <ul class="botmenu flrght">
+            <li><i class="material-icons">&#xE8FD;</i><a href="#">Help</a></li>
+            <li class="actv"><i class="material-icons">&#xE2C8;</i><a href="#">Resources</a></li>
+            <li><i class="fa fa-angle-left" aria-hidden="true"></i><a href="#">Back</a></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	<div class="midlast"><ul>
+	<li>Partner Brand Color 1 - <span class='color1'>#00aabb</span></li>
+	<li>Partner Brand Color 2 - <span class='color2'>#084045</span></li>
+	<li>Text Color - <span class='color3'>#FFFFFF</span></li>
+	</ul></div>
+  </div>
+  
+  
   <div id="mobile-print" class="mobile-view ui-view" style="display: none">
     <div id="mobile_menu">
       <div class="first_col">
@@ -201,97 +281,6 @@
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/bootstrap-colorpicker.min.js"></script>
 <script src="js/html2canvas.js"></script> 
-<script>
-    $(document).ready(function(){
-/*
-  For switching mobile and desktop tabs
-*/
-    $('input[type=radio]')
-          .on('click', function(ev){
-            var id = ev.currentTarget.id;
-            $('.ui-view').hide();
-            $('.'+id+'-view').show();
-          });
-
-      $('#cp1, #cp2')
-          .colorpicker().on('changeColor', function(ev){
-              console.log(ev.value);
-              var colorCode = ev.value,
-                  id = ev.currentTarget.id,
-                  idSetForBG = [],
-                  idSetForBorder = [],
-                  idSetForColor = [];
-
-              if(colorCode){
-                if(id === 'cp1'){
-                  idSetForBG = ['#mobile_menu .first_col', '#mobile_menu .bottom_area ul.botuplk li.three .progress', '#mobile_menu .bottom_area .progress', '#mobile_menu .bottom_area ul.botuplk li.five span', '#mobile_menu .third_col', '.progress'];
-                  idSetForBorder = [];
-
-                  /* Offsets */
-                  $('#mobile_menu .second_col').css({'border-bottom':'4px solid '+colorCode});
-                }else{
-                  idSetForBG = ['#mobile_menu .bottom_area', '#mobile_menu .second_col', '.midbottom', '#mobile_menu .first_col ul li:after'];
-                  idSetForBorder = ['#mobile_menu .first_col ul li'];
-                  idSetForColor = ['.breadcrumb i'];
-                }
-
-                idSetForBG.map(function(obj){
-                  $(obj).css({'background-color':colorCode});
-                });
-
-                idSetForBorder.map(function(obj){
-                  $(obj).css({'border-bottom':'1px solid '+colorCode});
-                });
-
-                idSetForColor.map(function(obj){
-                  $(obj).css({'color':colorCode});
-                });
-              }
-              
-
-          });
-          html2canvas('#prntdesk', {
-              onrendered: function(canvas) {
-                  // canvas is the final rendered <canvas> element
-              }
-          });
-
-          $(".save-prev-img").click(function() {
-              html2canvas($("#prntdesk"), {
-                onrendered: function(canvas) {
-                  saveAs(canvas.toDataURL(), 'desktop.png');
-                }
-              });
-            });
-
-            function saveAs(uri, filename) {
-              var link = document.createElement('a');
-              if (typeof link.download === 'string') {
-                link.href = uri;
-                link.download = filename;
-
-                //Firefox requires the link to be in the body
-                document.body.appendChild(link);
-
-                //simulate click
-                link.click();
-
-                //remove the link when done
-                document.body.removeChild(link);
-              } else {
-                window.open(uri);
-              }
-            }
-    });
-</script> 
-<script>
-$(document).on('click', '.browse', function(){
-  var file = $(this).parent().parent().parent().find('.file');
-  file.trigger('click');
-});
-$(document).on('change', '.file', function(){
-  $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
-});
-</script>
+<script src="js/main.js"></script> 
 </body>
 </html>
