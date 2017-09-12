@@ -801,7 +801,10 @@ ul.resources li {
 	background: #2a3039;
 	display:block;
 	padding:9px 20px;
-	border-top: 1px solid #303945;
+	border-bottom: 1px solid #303945;
+}
+ul.resources li:last-child{
+	border-bottom: 0px !important;
 }
 ul.resources li a {
     color: #FFF;

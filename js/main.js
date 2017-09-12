@@ -32,15 +32,15 @@ $(document).ready(function(){
 
               if(colorCode){
                 if(id === 'cp2'){
-                  idSetForBG = ['#mobile_menu .first_col', '#mobile_menu .bottom_area ul.botuplk li.three .progress', '#mobile_menu .bottom_area .progress', '#mobile_menu .bottom_area ul.botuplk li.five span', '#mobile_menu .third_col', '.progress'];
+                  idSetForBG = ['ul.resources li:not(".headermenu")', '#mobile_menu .first_col', '#mobile_menu .bottom_area ul.botuplk li.three .progress', '#mobile_menu .bottom_area .progress', '#mobile_menu .bottom_area ul.botuplk li.five span', '#mobile_menu .third_col', '.progress', 'ul.botmenu li.actv'];
                   idSetForBorder = [];
 
-                  /* Offsets */
+                  /* Offsets */ 
                   $('#mobile_menu .second_col').css({'border-bottom':'4px solid '+colorCode});
                   $('.color2').text(colorCode);
                 }else{
-                  idSetForBG = ['#mobile_menu .bottom_area', '#mobile_menu .second_col', '.midbottom', '#mobile_menu .first_col ul li:after'];
-                  idSetForBorder = ['#mobile_menu .first_col ul li'];
+                  idSetForBG = ['ul.resources li.headermenu', '#mobile_menu .bottom_area', '#mobile_menu .second_col', '.midbottom', '#mobile_menu .first_col ul li:after'];
+                  idSetForBorder = ['#mobile_menu .first_col ul li', 'ul.resources li'];
                   idSetForColor = ['.breadcrumb i'];
                   $('.color1').text(colorCode);
                 }
