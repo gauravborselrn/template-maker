@@ -627,7 +627,7 @@ span.rdone i, span.rdtwo i {
 	font-size:15px;
 }
 #mobile_menu .second_col ul li a {
-	color: #0a0a0a;
+	color: #fff;
 	padding-right: 20px;
 	display: block;
 	position: relative;
@@ -649,7 +649,7 @@ span.rdone i, span.rdtwo i {
 	margin: 0 auto;
 }
 #mobile_menu .bottom_area ul.midtimer li {
-	color: #0a0a0a;
+	color: #fff;
 }
 div#mobile_menu {
 	width: 424px;
@@ -687,7 +687,7 @@ div#mobile-print {
 	font-size:24px;
 }
 #mobile_menu .bottom_area ul.botuplk li.two, #mobile_menu .bottom_area ul.botuplk li.four{
-    color: #0a0a0a;
+    color: #fff;
 	font-size:11px;
 	line-height:27px;
 }
@@ -828,6 +828,32 @@ ul.resources li.headermenu i {
     position: absolute;
     right: 10px;
     font-size: 20px;
+}
+/* 13 sept css */
+.lftfixed {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+}
+.rtlright {
+    width: 100%;
+    padding-left: 400px;
+}
+.tpfxd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 8;
+	-webkit-box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.10);
+-moz-box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.10);
+box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.10);
+}
+.tphight {
+    margin-top: 110px;
 }
 /*=======================================================
 			RESPONSIVE

@@ -28,7 +28,7 @@
                 var reader = new FileReader();
 
                 reader.onload = function (e) { 
-                    $('#logo-holder')
+                    $('.logo-holder')
                         .attr('src', e.target.result);
                 };
 
@@ -39,7 +39,7 @@
 </head>
 <body>
 <div class="container-fluid">
-<div class="col-lg-3 col-md-3 nopadd zone">
+<div class="col-lg-3 col-md-3 nopadd zone lftfixed">
   <div class="sidebar">
     <h3>DIY Template Maker</h3>
     <div class="md-form">
@@ -94,13 +94,13 @@
     </div>
     <!-- <a class="sitebutton marg-left-35">Reset</a> <img src="images/lrnlogo.jpg" class="margin-b-35"> --></div>
 </div>
-<div class="col-lg-9 col-md-9 nopadd">
-  <div class="top"><a href="#" class="sitebutton save-prev-img"><i class="fa fa-download" aria-hidden="true"></i>Save Preview Image</a></div>
-  
+<div class="col-lg-9 col-md-9 nopadd rtlright">
+  <div class="top tpfxd"><a href="#" class="sitebutton save-prev-img"><i class="fa fa-download" aria-hidden="true"></i>Save Preview Image</a></div>
+  <div class="tphight">
   <div id="prntdesk" class="middle desktop-view ui-view">
     <div class="midtop">
       <div class="row">
-        <div class="col-lg-4 col-md-4 logo"><img id='logo-holder' src="images/logo.jpg" alt="Logo"></div>
+        <div class="col-lg-4 col-md-4 logo"><img class='logo-holder' src="images/logo.jpg" alt="Logo"></div>
         <div class="col-lg-8 col-md-8">
           <ul class="breadcrumb">
             <li>The Company Code: Putting Principle into Practice</li>
@@ -153,7 +153,7 @@
   <div id="prntdesk-open" class="middle desktop-view ui-view">
     <div class="midtop">
       <div class="row">
-        <div class="col-lg-4 col-md-4 logo"><img id='logo-holder' src="images/logo.jpg" alt="Logo"></div>
+        <div class="col-lg-4 col-md-4 logo"><img class='logo-holder' src="images/logo.jpg" alt="Logo"></div>
         <div class="col-lg-8 col-md-8">
           <ul class="breadcrumb">
             <li>The Company Code: Putting Principle into Practice</li>
@@ -276,6 +276,7 @@
     </div>
   </div>
 </div>
+  </div>
 <!-- /FOOTER --> 
 <script src="js/jquery-3.2.0.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
