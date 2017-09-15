@@ -13,7 +13,7 @@ $(document).ready(function(){
     $('#text-color input[type=radio]')
           .on('click', function(ev){
             var val = ev.currentTarget.value,
-                idSetForTextColor = ['.botmenu li a', '#mobile_menu .second_col ul li a', '#mobile_menu .bottom_area ul.botuplk li.two', '#mobile_menu .bottom_area ul.botuplk li.four', 'ul.resources li a'];
+                idSetForTextColor = ['#mobile_menu .first_col ul li i', 'span.btcopy', '.midcorn a', 'ul.midtimer li', '.botmenu li i', '.botmenu li a', '#mobile_menu .second_col ul li a', '#mobile_menu .bottom_area ul.botuplk li.two', '#mobile_menu .bottom_area ul.botuplk li.four', 'ul.resources li a'];
                 
                 idSetForTextColor.map(function(obj){
                   $(obj).css({'color':val});
@@ -66,18 +66,18 @@ $(document).ready(function(){
               if(selectedChoice === 'desktop'){
                 html2canvas($("#prntdesk"), {
                   onrendered: function(canvas) {
-                    saveAs(canvas.toDataURL(), 'desktop.png');
+                    saveAs(canvas.toDataURL(), 'lrn-recommended-desktop.png');
                   }
                 });
                 html2canvas($("#prntdesk-open"), {
                   onrendered: function(canvas) {
-                    saveAs(canvas.toDataURL(), 'desktop-open-menu.png');
+                    saveAs(canvas.toDataURL(), 'lrn-recommended-desktop-with-menu.png');
                   }
                 });
               }else{
                 html2canvas($("#mobile-print"), {
                 onrendered: function(canvas) {
-                  saveAs(canvas.toDataURL(), 'mobile.png');
+                  saveAs(canvas.toDataURL(), 'lrn-recommended-mobile.png');
                 }
               });              
               }
